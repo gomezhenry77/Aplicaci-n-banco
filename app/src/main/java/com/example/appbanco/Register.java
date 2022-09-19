@@ -70,8 +70,8 @@ public class Register extends AppCompatActivity implements AdapterView.OnItemSel
                 cvCustomer.put("name", sName);
                 cvCustomer.put("password", sPassword);
                 cvCustomer.put("rol", srolSelect);
-                db.insert("customer", null, cvCustomer);
-                db.close();
+                dbadd.insert("customer", null, cvCustomer);
+                dbadd.close();
                 Toast.makeText(getApplicationContext(), "Cliente agregado correctamente", Toast.LENGTH_SHORT).show();
             } catch(Exception e) {
                 Toast.makeText(getApplicationContext(), "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
